@@ -4,7 +4,7 @@ import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { X, Heart, ExternalLink } from "lucide-react"
 
-const DONATE_URL = "https://buymeacoffee.com/0xejebduoo"
+const DONATE_URL = "https://buymeacoffee.com/supportiitool"
 
 export function DonateModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
     return (
