@@ -1,8 +1,8 @@
 "use client"
 
+import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { X, Heart, ExternalLink } from "lucide-react"
-import QRCode from "react-qr-code"
 
 const DONATE_URL = "https://buymeacoffee.com/0xejebduoo"
 
@@ -41,11 +41,12 @@ export function DonateModal({ isOpen, onClose }: { isOpen: boolean; onClose: () 
                         </p>
 
                         <div className="p-4 bg-white rounded-xl mb-6 shadow-md">
-                            <QRCode
-                                value={DONATE_URL}
-                                size={160}
-                                style={{ height: "auto", maxWidth: "100%", width: "100%" }}
-                                viewBox={`0 0 160 160`}
+                            <Image
+                                src="/donate-qr.png"
+                                alt="Donate QR Code"
+                                width={160}
+                                height={160}
+                                className="w-[160px] h-[160px] object-contain"
                             />
                         </div>
 
